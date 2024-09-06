@@ -1,0 +1,6 @@
+Maquina utilizada:
+
+tipo de procesador: 12th Gen Intel(R) Core(TM) i5-12450H   2.50 GHz
+velocidad: 2.50 GHz
+capacidad de memoria RAM: 8 GB
+capacidad disco: 475 GB

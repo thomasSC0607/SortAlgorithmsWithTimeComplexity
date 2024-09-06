@@ -88,30 +88,34 @@ public class practica1 {
                 List<String> palabras = leerArchivo(archivoEntrada, cantidadPalabras);
 
                 // Medir tiempo de ejecución para BubbleSort
-                List<String> palabrasBubble = new ArrayList<>(palabras);
-                long startTimeBubble = System.currentTimeMillis(); // Tiempo de inicio
-                bubbleSort(palabrasBubble);
-                long endTimeBubble = System.currentTimeMillis();   // Tiempo de fin
-                long durationBubble = endTimeBubble - startTimeBubble; // Duración en milisegundos
-                escribirArchivo(archivoSalidaBubble, palabrasBubble);
+//                List<String> palabrasBubble = new ArrayList<>(palabras);
+//                long startTimeBubble = System.currentTimeMillis(); // Tiempo de inicio
+//                bubbleSort(palabrasBubble);
+//                long endTimeBubble = System.currentTimeMillis();   // Tiempo de fin
+//                long durationBubble = endTimeBubble - startTimeBubble; // Duración en milisegundos
+//                escribirArchivo(archivoSalidaBubble, palabrasBubble);
 
                 // Medir tiempo de ejecución para BucketSort
-//                List<String> palabrasBucket = new ArrayList<>(palabras);
-//                long startTimeBucket = System.currentTimeMillis(); // Tiempo de inicio
-//                bucketSort(palabrasBucket);
-//                long endTimeBucket = System.currentTimeMillis();   // Tiempo de fin
-//                long durationBucket = endTimeBucket - startTimeBucket; // Duración en milisegundos
-//                escribirArchivo(archivoSalidaBucket, palabrasBucket);
+                List<String> palabrasBucket = new ArrayList<>(palabras);
+                long startTimeBucket = System.currentTimeMillis(); // Tiempo de inicio
+                bucketSort(palabrasBucket);
+                long endTimeBucket = System.currentTimeMillis();   // Tiempo de fin
+                long durationBucket = endTimeBucket - startTimeBucket; // Duración en milisegundos
+                escribirArchivo(archivoSalidaBucket, palabrasBucket);
 
                 // Mostrar el tiempo de ejecución en la consola
-                System.out.println("Tiempo de ejecución de BubbleSort: " + durationBubble + " ms, con cantidad de palabras: "+cantidadPalabras);
-//                System.out.println("Tiempo de ejecución de BucketSort: " + durationBucket + " ms, con cantidad de palabras: "+cantidadPalabras);
+//                System.out.println("Tiempo de ejecución de BubbleSort: " + durationBubble + " ms, con cantidad de palabras: "+cantidadPalabras);
+                System.out.println("Tiempo de ejecución de BucketSort: " + durationBucket + " ms, con cantidad de palabras: "+cantidadPalabras);
 
                 System.out.println("Archivos ordenados creados correctamente.");
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            cantidadPalabras += 10000;
+            if (cantidadPalabras == 240000){
+                cantidadPalabras += 7047;
+            }else {
+                cantidadPalabras += 10000;
+            }
         }
 
     }
